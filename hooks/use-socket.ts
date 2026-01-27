@@ -33,7 +33,7 @@ export const useSocket = () => {
         setIsConnected(true);
         
         // Join notification room
-        socketInstance?.emit("joinNotifications", session.user.id);
+        socketInstance?.emit("joinNotifications", session?.user?.id);
         socketInstance?.emit("joinAlerts");
       });
 
